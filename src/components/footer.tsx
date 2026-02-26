@@ -27,8 +27,9 @@ export function Footer() {
                         </Link>
                     </div>
                 </div>
-                <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-                    © {new Date().getFullYear()} Ritvik. All rights reserved.
+                <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground flex flex-col items-center gap-2">
+                    <p>© {new Date().getFullYear()} Ritvik. All rights reserved.</p>
+                    <p className="text-[10px] opacity-20 font-mono">Build: {new Date().toISOString()}</p>
                 </div>
             </div>
         </footer>

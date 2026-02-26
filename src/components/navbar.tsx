@@ -31,7 +31,7 @@ export function Navbar() {
                         {time || "00:00:00"}
                     </span>
                     <span className="text-[10px] font-bold tracking-widest uppercase text-white/40 font-mono">
-                        PST — Washington, DC
+                        CST — Austin, TX
                     </span>
                 </div>
 

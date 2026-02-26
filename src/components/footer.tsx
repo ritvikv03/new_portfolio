@@ -13,16 +13,15 @@ export function Footer() {
                 {/* Connect Section */}
                 <div className="mb-24">
                     <h2 className="text-3xl md:text-5xl font-black mb-12 text-white tracking-tight">
-                        Let&apos;s connect!
+                        {PORTFOLIO_DATA.copy.connectTitle}
                     </h2>
 
                     <div className="max-w-xl mx-auto mb-12">
                         <p className="text-[#a1a1aa] text-sm md:text-base leading-relaxed mb-6">
-                            Appreciate you stopping by. If a project sparked something or you
-                            just want to jam on builds, drop me a line.
+                            {PORTFOLIO_DATA.copy.connectSubtitle}
                         </p>
                         <p className="text-white text-lg md:text-xl font-bold leading-tight">
-                            Always keen to collaborate, learn, and ship new ideas.
+                            {PORTFOLIO_DATA.copy.connectDescription}
                         </p>
                     </div>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Twitter, Code2, CheckCircle2, Mail } from "lucide-react";
+import { Github, Code2, CheckCircle2, Mail } from "lucide-react";
 import Link from "next/link";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 
@@ -20,8 +20,8 @@ export function Hero() {
                 >
                     {/* Top-Right Social Icons */}
                     <div className="absolute top-8 right-8 flex items-center space-x-4 text-[#a1a1aa]">
-                        <Link href={socials.twitter} target="_blank" className="hover:text-white transition-colors">
-                            <Twitter size={20} />
+                        <Link href={socials.github} target="_blank" className="hover:text-white transition-colors">
+                            <Github size={20} />
                         </Link>
                         <Link href={socials.leetcode} target="_blank" className="hover:text-white transition-colors">
                             <Code2 size={20} />
@@ -32,17 +32,10 @@ export function Hero() {
                         {/* Left-Aligned Avatar - Squircle/Rounded-XL */}
                         <div className="w-24 h-24 rounded-2xl bg-[#18181b] border border-[#1e1e20] overflow-hidden relative shadow-2xl flex-shrink-0">
                             <img
-                                src="/profile.jpg"
+                                src="https://github.com/ritvikv03.png"
                                 alt={name}
                                 className="w-full h-full object-cover"
-                                onError={(e) => {
-                                    (e.target as HTMLImageElement).style.display = 'none';
-                                }}
                             />
-                            {/* Fallback pattern while image is missing */}
-                            <div className="absolute inset-0 bg-[#18181b] flex items-center justify-center text-white/5 font-bold text-4xl">
-                                {name.charAt(0)}
-                            </div>
                         </div>
 
                         <div className="flex-grow text-left">

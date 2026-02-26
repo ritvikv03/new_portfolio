@@ -1,13 +1,13 @@
 export const PORTFOLIO_DATA = {
     name: "Ritvik Vasikarla",
     role: "Full-stack engineer building technical software & visual products.",
-    bio: "Engineering high-performance, visually stunning digital experiences. Focused on AI, Computer Vision, and modern web architecture.",
+    bio: "Full-stack engineer and Data/ML enthusiast building high-performance, visually stunning digital experiences. Focused on AI Agents, Computer Vision, and modern software architecture.",
     email: "ritvik.vasikarla@gmail.com",
     socials: {
         github: "https://github.com/ritvikv03",
         linkedin: "https://www.linkedin.com/in/ritvikvasikarla/",
-        leetcode: "https://leetcode.com/ritvikv03/",
-        twitter: "https://twitter.com/ritvikv03",
+        leetcode: "https://leetcode.com/u/ritvikv2/",
+        twitter: "https://twitter.com/ritvikv03", // Will be swapped for GitHub in Hero
         resume: "/resume.pdf",
     },
     activity: {
@@ -21,6 +21,13 @@ export const PORTFOLIO_DATA = {
         { name: "NumPy", icon: "Cpu" },
         { name: "Matplotlib", icon: "BarChart" },
         { name: "Scikit-learn", icon: "Brain" },
+        { name: "TensorFlow", icon: "Brain" },
+        { name: "PyTorch", icon: "Brain" },
+        { name: "OpenAI API", icon: "Zap" },
+        { name: "LangChain", icon: "Terminal" },
+        { name: "AI Agents", icon: "Smartphone" },
+        { name: "Pinecone", icon: "Database" },
+        { name: "Hugging Face", icon: "Globe" },
         { name: "SQLite", icon: "Database" },
         { name: "DuckDB", icon: "Database" },
         { name: "MySQL", icon: "Database" },
@@ -40,11 +47,12 @@ export const PORTFOLIO_DATA = {
     experience: [
         {
             company: "Self-Employed",
-            title: "Full Stack Engineer",
+            title: "Full Stack Engineer & AI Developer",
             type: "Freelance",
             period: "2024 — Present",
             points: [
                 "Developing modern web applications using Next.js, TypeScript, and AI integrations.",
+                "Engineering custom AI agents and ML pipelines for technical product builds.",
                 "Focused on high-performance architecture and premium user experience design."
             ]
         },
@@ -55,7 +63,8 @@ export const PORTFOLIO_DATA = {
             period: "2023 — 2024",
             points: [
                 "Implemented deep learning models for computer vision tasks using TensorFlow and PyTorch.",
-                "Specialized in object detection and facial feature analysis for research datasets."
+                "Specialized in object detection and facial feature analysis for research datasets.",
+                "Developed end-to-end data processing pipelines for large-scale ML model training."
             ]
         },
         {
@@ -65,7 +74,8 @@ export const PORTFOLIO_DATA = {
             period: "2022 — 2023",
             points: [
                 "Collaborated with cross-functional teams to build responsive user interfaces.",
-                "Optimized dashboard performance and implemented real-time data visualization."
+                "Optimized dashboard performance and implemented real-time data visualization.",
+                "Integrated REST APIs and streamlined frontend data management systems."
             ]
         }
     ],
@@ -73,35 +83,40 @@ export const PORTFOLIO_DATA = {
         {
             title: "Data Analysis Chatbot",
             description: "Interactive Streamlit app using Google Gemini AI to simplify complex data analytics. Upload CSV/Excel/PDF/Word for instant insights.",
-            tech: ["Python", "Streamlit", "Gemini AI"],
+            tech: ["Python", "Streamlit", "Gemini AI", "Pandas", "NLP"],
             github: "https://github.com/ritvikv03/Data_Analysis_Chatbot",
-            image: "/project-data.png",
+            image: "https://github.com/ritvikv03.png", // Using avatar as placeholder, user will replace
             status: "Featured Project",
             span: "md:col-span-2"
         },
         {
             title: "Spotify Visualizer & Recommendation",
             description: "Vue-based interactive tool providing a galaxy visualization of music and playlist recommendations using the Spotify API.",
-            tech: ["Vue.js", "Spotify API", "Tailwind"],
+            tech: ["Vue.js", "Spotify API", "Tailwind", "JavaScript"],
             github: "https://github.com/ritvikv03/Spotify-Visualizer-Recommendation",
-            image: "/project-spotify.png",
+            image: "https://github.com/ritvikv03.png",
             span: "md:col-span-1"
         },
         {
             title: "Molson Coors Analytics",
             description: "Data science project for eCommerce content optimization to drive sales for Molson Coors, developed for an analytics challenge.",
-            tech: ["Python", "Pandas", "Analytics"],
+            tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Analytics"],
             github: "https://github.com/ritvikv03/Molson_Coors_Analytics_Challenge",
-            image: "/project-analytics.png",
+            image: "https://github.com/ritvikv03.png",
             span: "md:col-span-1"
         },
         {
             title: "Portfolio Website",
             description: "Modern, high-performance developer portfolio with glassmorphism, fluid animations, and a secure build pipeline.",
-            tech: ["Next.js", "TypeScript", "Tailwind 4"],
+            tech: ["Next.js", "TypeScript", "Tailwind 4", "Framer Motion"],
             github: "https://github.com/ritvikv03/new_portfolio",
-            image: "/project-portfolio.png",
+            image: "https://github.com/ritvikv03.png",
             span: "md:col-span-2"
         }
-    ]
+    ],
+    copy: {
+        connectTitle: "Let's work together.",
+        connectSubtitle: "I'm always open to discussing technical projects, research opportunities, or collaborating on innovative products.",
+        connectDescription: "Whether you have a specific idea or just want to talk tech, feel free to reach out. I'm ready to contribute and ship high-quality results."
+    }
 };

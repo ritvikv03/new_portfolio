@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 const PROJECTS = [
@@ -43,66 +43,59 @@ export function Projects() {
     return (
         <section id="projects" className="py-24">
             <div className="container mx-auto px-6 max-w-5xl">
-                <div className="mb-16">
-                    <h2 className="text-3xl md:text-5xl font-black mb-4">Featured Work</h2>
-                    <p className="text-white/50 max-w-xl text-sm leading-relaxed">
-                        A selection of my recent technical work across AI, data science, and web engineering.
-                    </p>
-                </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {PROJECTS.map((project, index) => (
                         <motion.div
                             key={project.title}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             className="bento-card group flex flex-col p-0 overflow-hidden"
                         >
-                            {/* Project Banner Image */}
-                            <div className="aspect-video relative overflow-hidden bg-muted/20">
+                            {/* Image Banner */}
+                            <div className="aspect-[16/9] relative overflow-hidden bg-[#18181b]">
                                 <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                                     style={{ backgroundImage: `url(${project.image})` }}
                                 />
-                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
-
-                                <div className="absolute top-4 left-4">
-                                    <span className="badge bg-black/40 backdrop-blur-md border hover:bg-black transition-colors">{project.status}</span>
-                                </div>
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
                             </div>
 
-                            <div className="p-8">
-                                <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                                <p className="text-sm text-white/50 mb-6 leading-relaxed line-clamp-2">
+                            {/* Content */}
+                            <div className="p-8 flex flex-col flex-grow">
+                                <span className="text-[10px] font-bold tracking-widest uppercase text-[#a1a1aa] mb-2">
+                                    {project.status}
+                                </span>
+                                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                                    {project.title}
+                                </h3>
+                                <p className="text-[#a1a1aa] text-sm leading-relaxed mb-6 line-clamp-3">
                                     {project.description}
                                 </p>
 
-                                <div className="flex flex-wrap gap-2 mb-8">
-                                    {project.tech.map(t => (
-                                        <span key={t} className="badge">
-                                            {t}
-                                        </span>
-                                    ))}
+                                <div className="mb-8">
+                                    <h4 className="text-[10px] font-bold tracking-widest uppercase text-[#a1a1aa] mb-3">
+                                        Technologies
+                                    </h4>
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.tech.map((t) => (
+                                            <span key={t} className="badge">
+                                                {t}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
 
-                                <div className="flex items-center justify-between mt-auto">
+                                <div className="mt-auto">
                                     <Link
                                         href={project.github}
                                         target="_blank"
-                                        className="text-xs font-bold tracking-widest uppercase text-white/50 hover:text-white transition-colors flex items-center"
+                                        className="inline-flex items-center text-xs font-bold tracking-widest uppercase text-white/50 hover:text-white transition-colors group"
                                     >
-                                        View Details <ArrowUpRight size={14} className="ml-1.5" />
+                                        View Details
+                                        <ArrowUpRight size={14} className="ml-1.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                                     </Link>
-                                    <div className="flex space-x-3">
-                                        <Link href={project.github} target="_blank" className="text-white/30 hover:text-white transition-colors">
-                                            <Github size={18} />
-                                        </Link>
-                                        <Link href="#" className="text-white/30 hover:text-white transition-colors">
-                                            <ExternalLink size={18} />
-                                        </Link>
-                                    </div>
                                 </div>
                             </div>
                         </motion.div>

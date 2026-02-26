@@ -1,43 +1,68 @@
-import { Mail, ArrowUpRight } from "lucide-react";
+"use client";
+
+import { Mail, Github, Twitter, Linkedin, Code2, FileText } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
     return (
-        <footer className="py-24 border-t border-white/5">
-            <div className="container mx-auto px-6 max-w-5xl">
-                <div className="bento-card p-12 text-center flex flex-col items-center">
-                    <h2 className="text-4xl md:text-6xl font-black mb-8">
-                        Let&apos;s <span className="text-gradient">connect!</span>
+        <footer className="py-24">
+            <div className="container mx-auto px-6 max-w-5xl text-center">
+                {/* Connect Section */}
+                <div className="mb-24">
+                    <h2 className="text-3xl md:text-5xl font-black mb-12 text-white">
+                        Let&apos;s connect!
                     </h2>
-                    <p className="text-white/50 mb-12 max-w-md">
-                        I&apos;m currently open to new opportunities and interesting projects.
-                    </p>
+
+                    <div className="max-w-xl mx-auto mb-12">
+                        <p className="text-[#a1a1aa] text-sm leading-relaxed mb-6">
+                            Appreciate you stopping by. If a project sparked something or you
+                            just want to jam on builds, drop me a line.
+                        </p>
+                        <p className="text-white text-lg md:text-xl font-bold leading-tight">
+                            Always keen to collaborate, learn, and ship new ideas.
+                        </p>
+                    </div>
 
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link
                             href="mailto:ritvik.vasikarla@gmail.com"
-                            className="px-8 py-4 rounded-full bg-white text-black font-bold flex items-center hover:bg-white/90 transition-all active:scale-95"
+                            className="flex items-center space-x-2 px-6 py-3 rounded-xl bg-transparent border border-[#1e1e20] hover:border-[#3f3f46] hover:bg-white/5 transition-all group"
                         >
-                            Email Me <Mail className="ml-2" size={18} />
+                            <Mail size={16} className="text-[#a1a1aa] group-hover:text-white" />
+                            <span className="text-sm font-bold text-white">Email Me</span>
                         </Link>
                         <Link
-                            href="https://www.linkedin.com/in/ritvikvasikarla/"
-                            target="_blank"
-                            className="px-8 py-4 rounded-full bg-white/5 border border-white/10 font-bold flex items-center hover:bg-white/10 transition-all active:scale-95"
+                            href="#"
+                            className="flex items-center space-x-2 px-6 py-3 rounded-xl bg-transparent border border-[#1e1e20] hover:border-[#3f3f46] hover:bg-white/5 transition-all group"
                         >
-                            Résumé <ArrowUpRight className="ml-2" size={18} />
+                            <FileText size={16} className="text-[#a1a1aa] group-hover:text-white" />
+                            <span className="text-sm font-bold text-white">Resume</span>
                         </Link>
                     </div>
+                </div>
 
-                    <div className="mt-24 pt-8 border-t border-white/5 w-full flex flex-col md:flex-row justify-between items-center text-[10px] font-bold tracking-widest uppercase text-white/20 gap-4">
-                        <p>© {new Date().getFullYear()} Ritvik Vasikarla</p>
-                        <div className="flex space-x-6">
-                            <Link href="https://github.com/ritvikv03" target="_blank" className="hover:text-white transition-colors">GITHUB</Link>
-                            <Link href="https://www.linkedin.com/in/ritvikvasikarla/" target="_blank" className="hover:text-white transition-colors">LINKEDIN</Link>
-                            <Link href="https://www.instagram.com/ritvikvasikarla/" target="_blank" className="hover:text-white transition-colors">INSTAGRAM</Link>
-                        </div>
-                        <p>Built with Next.js</p>
-                    </div>
+                {/* Bottom Social Row */}
+                <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 pt-8 border-t border-[#1e1e20]">
+                    <Link href="mailto:ritvik.vasikarla@gmail.com" className="flex items-center space-x-2 text-[#a1a1aa] hover:text-white transition-colors group">
+                        <Mail size={14} />
+                        <span className="text-xs font-medium">Mail</span>
+                    </Link>
+                    <Link href="https://github.com/ritvikv03" target="_blank" className="flex items-center space-x-2 text-[#a1a1aa] hover:text-white transition-colors group">
+                        <Github size={14} />
+                        <span className="text-xs font-medium">Github</span>
+                    </Link>
+                    <Link href="#" className="flex items-center space-x-2 text-[#a1a1aa] hover:text-white transition-colors group">
+                        <Twitter size={14} />
+                        <span className="text-xs font-medium">Twitter</span>
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/ritvikvasikarla/" target="_blank" className="flex items-center space-x-2 text-[#a1a1aa] hover:text-white transition-colors group">
+                        <Linkedin size={14} />
+                        <span className="text-xs font-medium">LinkedIn</span>
+                    </Link>
+                    <Link href="#" className="flex items-center space-x-2 text-[#a1a1aa] hover:text-white transition-colors group">
+                        <Code2 size={14} />
+                        <span className="text-xs font-medium">LeetCode</span>
+                    </Link>
                 </div>
             </div>
         </footer>

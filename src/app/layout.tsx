@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { StarfieldBackground } from "@/components/starfield-background";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,17 +25,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
+          enableSystem={false}
           disableTransitionOnChange
         >
-          <div className="relative min-h-screen flex flex-col">
+          <StarfieldBackground />
+          <div className="relative z-10 min-h-screen flex flex-col">
             {children}
           </div>
         </ThemeProvider>

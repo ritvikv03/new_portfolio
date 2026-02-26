@@ -1,51 +1,69 @@
 "use client";
 
-import {
-    Cpu,
-    Database,
-    Layout,
-    Zap
-} from "lucide-react";
 import { motion } from "framer-motion";
+import {
+    Code2, Database, Layout, Smartphone, Cloud, Terminal,
+    Cpu, Brain, Globe, Search, BarChart, Server
+} from "lucide-react";
 
-const SKILLS = [
-    { name: "Frontend", icon: Layout, items: ["React", "Next.js", "Tailwind CSS", "TypeScript"] },
-    { name: "Backend", icon: Database, items: ["Node.js", "Python", "PostgreSQL", "MongoDB"] },
-    { name: "AI/ML", icon: Cpu, items: ["OpenCV", "TensorFlow", "PyTorch", "Computer Vision"] },
-    { name: "Tools", icon: Zap, items: ["Git", "Docker", "Vercel", "AWS"] },
+const SKILL_GROUPS = [
+    {
+        name: "Frontend",
+        skills: ["React", "Next.js", "TypeScript", "Tailwind", "Framer Motion", "Vue.js"],
+        icon: <Layout className="w-4 h-4" />
+    },
+    {
+        name: "Backend",
+        skills: ["Node.js", "Python", "PostgreSQL", "Supabase", "REST APIs", "GraphQL"],
+        icon: <Server className="w-4 h-4" />
+    },
+    {
+        name: "AI & ML",
+        skills: ["TensorFlow", "PyTorch", "OpenCV", "Scikit-Learn", "Gemini API", "LLMs"],
+        icon: <Brain className="w-4 h-4" />
+    },
+    {
+        name: "Tools",
+        skills: ["Git", "Docker", "Vercel", "Linux", "Unity", "Bash"],
+        icon: <Terminal className="w-4 h-4" />
+    }
 ];
 
 export function Skills() {
     return (
         <section id="skills" className="py-24">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">Technical Prowess</h2>
-                    <p className="text-muted-foreground max-w-xl mx-auto">
-                        A comprehensive toolkit built through years of learning and building complex systems.
+            <div className="container mx-auto px-6 max-w-5xl">
+                <div className="mb-16">
+                    <h2 className="text-3xl md:text-5xl font-black mb-4">Technical Stack</h2>
+                    <p className="text-white/50 max-w-xl text-sm leading-relaxed">
+                        A comprehensive overview of the technologies and tools I use to bring ideas to life.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {SKILLS.map((skill, index) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {SKILL_GROUPS.map((group, groupIndex) => (
                         <motion.div
-                            key={skill.name}
+                            key={group.name}
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="p-8 rounded-3xl border bg-background/50 hover:bg-background transition-colors group"
+                            transition={{ delay: groupIndex * 0.1 }}
+                            className="bento-card p-6"
                         >
-                            <skill.icon className="w-10 h-10 mb-6 text-primary group-hover:scale-110 transition-transform" />
-                            <h3 className="text-xl font-bold mb-4">{skill.name}</h3>
-                            <ul className="space-y-2">
-                                {skill.items.map(item => (
-                                    <li key={item} className="text-muted-foreground flex items-center text-sm">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-primary/40 mr-2" />
-                                        {item}
-                                    </li>
+                            <div className="flex items-center space-x-3 mb-6">
+                                <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-white/70">
+                                    {group.icon}
+                                </div>
+                                <h3 className="text-lg font-bold">{group.name}</h3>
+                            </div>
+
+                            <div className="flex flex-wrap gap-2">
+                                {group.skills.map((skill) => (
+                                    <span key={skill} className="badge bg-white/[0.03] hover:bg-white/10 transition-colors">
+                                        {skill}
+                                    </span>
                                 ))}
-                            </ul>
+                            </div>
                         </motion.div>
                     ))}
                 </div>

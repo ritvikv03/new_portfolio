@@ -2,9 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export function Navbar() {
     const [time, setTime] = React.useState<string>("");

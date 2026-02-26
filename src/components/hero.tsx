@@ -1,9 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Globe, Twitter, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { Github, Twitter, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
 export function Hero() {
     return (

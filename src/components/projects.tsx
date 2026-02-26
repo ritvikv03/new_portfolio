@@ -11,7 +11,8 @@ const PROJECTS = [
         tech: ["Python", "Streamlit", "Gemini AI"],
         github: "https://github.com/ritvikv03/Data_Analysis_Chatbot",
         image: "https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&q=80&w=800",
-        status: "Featured Project"
+        status: "Featured Project",
+        span: "md:col-span-2"
     },
     {
         title: "Spotify Visualizer & Recommendation",
@@ -19,7 +20,8 @@ const PROJECTS = [
         tech: ["Vue.js", "Spotify API", "Tailwind"],
         github: "https://github.com/ritvikv03/Spotify-Visualizer-Recommendation",
         image: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=800",
-        status: "Featured Project"
+        status: "Featured Project",
+        span: "md:col-span-1"
     },
     {
         title: "Molson Coors Analytics",
@@ -27,7 +29,8 @@ const PROJECTS = [
         tech: ["Python", "Pandas", "Analytics"],
         github: "https://github.com/ritvikv03/Molson_Coors_Analytics_Challenge",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-        status: "Featured Project"
+        status: "Featured Project",
+        span: "md:col-span-1"
     },
     {
         title: "Portfolio Website",
@@ -35,7 +38,8 @@ const PROJECTS = [
         tech: ["Next.js", "TypeScript", "Tailwind 4"],
         github: "https://github.com/ritvikv03/new_portfolio",
         image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
-        status: "Featured Project"
+        status: "Featured Project",
+        span: "md:col-span-2"
     }
 ];
 
@@ -47,35 +51,35 @@ export function Projects() {
                     {PROJECTS.map((project, index) => (
                         <motion.div
                             key={project.title}
-                            initial={{ opacity: 0, scale: 0.95 }}
+                            initial={{ opacity: 0, scale: 0.98 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bento-card group flex flex-col p-0 overflow-hidden"
+                            className={`bento-card group flex flex-col p-0 overflow-hidden ${project.span}`}
                         >
-                            {/* Image Banner */}
-                            <div className="aspect-[16/9] relative overflow-hidden bg-[#18181b]">
+                            {/* Image Banner 16:9 */}
+                            <div className="aspect-[16/9] relative overflow-hidden bg-[#18181b] border-b border-[#1e1e20]">
                                 <div
                                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                                     style={{ backgroundImage: `url(${project.image})` }}
                                 />
-                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+                                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors" />
                             </div>
 
-                            {/* Content */}
+                            {/* Content with 2rem padding (via bento-card class) */}
                             <div className="p-8 flex flex-col flex-grow">
                                 <span className="text-[10px] font-bold tracking-widest uppercase text-[#a1a1aa] mb-2">
                                     {project.status}
                                 </span>
-                                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 tracking-tight">
                                     {project.title}
                                 </h3>
-                                <p className="text-[#a1a1aa] text-sm leading-relaxed mb-6 line-clamp-3">
+                                <p className="text-[#a1a1aa] text-sm leading-relaxed mb-8 line-clamp-2">
                                     {project.description}
                                 </p>
 
-                                <div className="mb-8">
-                                    <h4 className="text-[10px] font-bold tracking-widest uppercase text-[#a1a1aa] mb-3">
+                                <div className="mb-10">
+                                    <h4 className="text-[10px] font-black tracking-widest uppercase text-white/30 mb-4">
                                         Technologies
                                     </h4>
                                     <div className="flex flex-wrap gap-2">
@@ -91,7 +95,7 @@ export function Projects() {
                                     <Link
                                         href={project.github}
                                         target="_blank"
-                                        className="inline-flex items-center text-xs font-bold tracking-widest uppercase text-white/50 hover:text-white transition-colors group"
+                                        className="inline-flex items-center text-xs font-bold tracking-widest uppercase text-white/40 hover:text-white transition-colors group"
                                     >
                                         View Details
                                         <ArrowUpRight size={14} className="ml-1.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

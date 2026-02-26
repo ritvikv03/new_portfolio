@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, GithubIcon, Terminal } from "lucide-react";
+import { ArrowRight, GithubIcon, Terminal } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {
@@ -28,7 +28,7 @@ export function Hero() {
                     </h1>
 
                     <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-                        I'm a full-stack engineer specializing in building high-performance,
+                        I&apos;m a full-stack engineer specializing in building high-performance,
                         visually stunning digital experiences. Transforming complex problems
                         into elegant solutions.
                     </p>

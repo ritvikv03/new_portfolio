@@ -1,16 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
-    Code2,
     Cpu,
     Database,
-    Globe,
-    Layers,
     Layout,
-    Smartphone,
     Zap
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const SKILLS = [
     { name: "Frontend", icon: Layout, items: ["React", "Next.js", "Tailwind CSS", "TypeScript"] },

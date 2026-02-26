@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Star, GitBranch } from "lucide-react";
+import { ExternalLink, Github, Star } from "lucide-react";
 import Link from "next/link";
 
 const PROJECTS = [

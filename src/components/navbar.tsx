@@ -3,9 +3,11 @@
 import React, { useEffect, useState } from "react";
 import { Github, Linkedin, FileText } from "lucide-react";
 import Link from "next/link";
+import { PORTFOLIO_DATA } from "@/data/portfolio";
 
 export function Navbar() {
     const [time, setTime] = useState("");
+    const { socials } = PORTFOLIO_DATA;
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -15,7 +17,7 @@ export function Navbar() {
                 hour: "2-digit",
                 minute: "2-digit",
                 second: "2-digit"
-            }) + " GMT-6");
+            }));
         }, 1000);
         return () => clearInterval(timer);
     }, []);
@@ -26,7 +28,7 @@ export function Navbar() {
                 {/* Local Time - 2 Line Format */}
                 <div className="flex flex-col">
                     <span className="text-sm font-bold text-white leading-none mb-1">
-                        {time.split(" ")[0] || "00:00:00"}
+                        {time || "00:00:00"}
                     </span>
                     <span className="text-[10px] font-bold tracking-widest uppercase text-white/40 font-mono">
                         PST — Washington, DC
@@ -36,7 +38,7 @@ export function Navbar() {
                 {/* Social Links as Outlined Buttons */}
                 <div className="flex items-center space-x-3">
                     <Link
-                        href="https://github.com/ritvikv03"
+                        href={socials.github}
                         target="_blank"
                         className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-[#1e1e20] bg-white/5 text-[#a1a1aa] hover:text-white hover:border-[#3f3f46] transition-all"
                     >
@@ -44,7 +46,7 @@ export function Navbar() {
                         <span className="text-[10px] font-bold tracking-widest uppercase">Github</span>
                     </Link>
                     <Link
-                        href="https://www.linkedin.com/in/ritvikvasikarla/"
+                        href={socials.linkedin}
                         target="_blank"
                         className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-[#1e1e20] bg-white/5 text-[#a1a1aa] hover:text-white hover:border-[#3f3f46] transition-all"
                     >
@@ -52,7 +54,8 @@ export function Navbar() {
                         <span className="text-[10px] font-bold tracking-widest uppercase">LinkedIn</span>
                     </Link>
                     <Link
-                        href="#"
+                        href={socials.resume}
+                        target="_blank"
                         className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-[#1e1e20] bg-white/5 text-[#a1a1aa] hover:text-white hover:border-[#3f3f46] transition-all"
                     >
                         <FileText size={14} />

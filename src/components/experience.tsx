@@ -1,41 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const EXPERIENCE = [
-    {
-        company: "Self-Employed",
-        title: "Full Stack Engineer",
-        type: "Freelance",
-        period: "2024 — Present",
-        points: [
-            "Developing modern web applications using Next.js, TypeScript, and AI integrations.",
-            "Focused on high-performance architecture and premium user experience design."
-        ]
-    },
-    {
-        company: "Academic Project",
-        title: "AI Research Fellow",
-        type: "Fellowship",
-        period: "2023 — 2024",
-        points: [
-            "Implemented deep learning models for computer vision tasks using TensorFlow and PyTorch.",
-            "Specialized in object detection and facial feature analysis for research datasets."
-        ]
-    },
-    {
-        company: "Tech Start-up",
-        title: "Frontend Developer Intern",
-        type: "Internship",
-        period: "2022 — 2023",
-        points: [
-            "Collaborated with cross-functional teams to build responsive user interfaces.",
-            "Optimized dashboard performance and implemented real-time data visualization."
-        ]
-    }
-];
+import { PORTFOLIO_DATA } from "@/data/portfolio";
 
 export function Experience() {
+    const { experience } = PORTFOLIO_DATA;
+
     return (
         <section id="experience" className="py-24">
             <div className="container mx-auto px-6 max-w-5xl">
@@ -43,12 +13,9 @@ export function Experience() {
                     Work experience
                 </h2>
 
-                <div className="relative pl-8 md:pl-12">
-                    {/* Vertical Timeline Line */}
-                    <div className="absolute left-[3px] top-2 bottom-0 w-[1px] bg-[#1e1e20]" />
-
+                <div className="relative pl-8 md:pl-12 border-l border-[#1e1e20]">
                     <div className="space-y-16">
-                        {EXPERIENCE.map((exp, index) => (
+                        {experience.map((exp, index) => (
                             <motion.div
                                 key={exp.company + index}
                                 initial={{ opacity: 0, x: -10 }}
@@ -58,28 +25,28 @@ export function Experience() {
                                 className="relative"
                             >
                                 {/* Timeline Dot */}
-                                <div className="absolute -left-[33px] md:-left-[49px] top-2 h-2 w-2 rounded-full bg-[#3f3f46] border border-[#1e1e20]" />
+                                <div className="absolute -left-[37px] md:-left-[53px] top-2 h-2.5 w-2.5 rounded-full bg-[#3f3f46] border border-[#1e1e20] z-10" />
 
-                                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 tracking-tight">
                                     {exp.company}
                                 </h3>
 
                                 <div className="flex flex-wrap items-center gap-2 mb-6">
-                                    <div className="flex items-center text-[#a1a1aa] text-sm">
-                                        <span className="font-mono mr-2 text-[10px]">{"</>"}</span>
-                                        <span className="font-bold">{exp.title}</span>
+                                    <div className="flex items-center text-[#a1a1aa] text-sm font-bold">
+                                        <span className="font-mono mr-2 text-[10px] opacity-40">{"</>"}</span>
+                                        <span>{exp.title}</span>
                                     </div>
-                                    <span className="text-[10px] font-bold tracking-widest uppercase text-[#a1a1aa]/80 border border-[#1e1e20] bg-white/[0.02] px-2 py-0.5 rounded-md">
+                                    <span className="text-[10px] font-bold tracking-widest uppercase text-white/30 border border-[#1e1e20] bg-white/[0.02] px-2 py-0.5 rounded-md">
                                         {exp.type}
                                     </span>
-                                    <span className="text-[10px] font-bold tracking-widest uppercase text-[#a1a1aa]/40">
+                                    <span className="text-[10px] font-bold tracking-widest uppercase text-white/20">
                                         | {exp.period}
                                     </span>
                                 </div>
 
                                 <ul className="space-y-4 max-w-3xl">
                                     {exp.points.map((point, i) => (
-                                        <li key={i} className="flex items-start text-[#a1a1aa] text-sm leading-relaxed">
+                                        <li key={i} className="flex items-start text-[#a1a1aa] text-sm md:text-base leading-relaxed">
                                             <span className="mr-3 mt-2 h-1 w-1 shrink-0 rounded-full bg-white/20" />
                                             {point}
                                         </li>

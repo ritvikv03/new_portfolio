@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Instagram } from "lucide-react";
 
 export function Footer() {
     return (
@@ -16,13 +16,13 @@ export function Footer() {
                         <Link href="https://github.com/ritvikv03" target="_blank" className="hover:text-primary">
                             <Github size={20} />
                         </Link>
-                        <Link href="#" className="hover:text-primary">
+                        <Link href="https://www.linkedin.com/in/ritvikvasikarla/" target="_blank" className="hover:text-primary">
                             <Linkedin size={20} />
                         </Link>
-                        <Link href="#" className="hover:text-primary">
-                            <Twitter size={20} />
+                        <Link href="https://www.instagram.com/ritvikvasikarla/" target="_blank" className="hover:text-primary">
+                            <Instagram size={20} />
                         </Link>
-                        <Link href="mailto:contact@example.com" className="hover:text-primary">
+                        <Link href="mailto:ritvik.vasikarla@gmail.com" className="hover:text-primary">
                             <Mail size={20} />
                         </Link>
                     </div>

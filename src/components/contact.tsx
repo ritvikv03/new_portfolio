@@ -24,7 +24,7 @@ export function Contact() {
 
                     <div className="flex flex-wrap justify-center gap-6">
                         <Link
-                            href="mailto:ritvik@example.com"
+                            href="mailto:ritvik.vasikarla@gmail.com"
                             className="flex items-center px-8 py-4 rounded-2xl bg-primary text-primary-foreground font-bold hover:scale-105 transition-all"
                         >
                             <Mail className="mr-2" size={20} /> Say Hello

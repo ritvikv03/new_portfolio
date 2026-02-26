@@ -6,32 +6,32 @@ import Link from "next/link";
 
 const PROJECTS = [
     {
-        title: "3D-Reconstruction",
-        description: "Point-cloud generation using stereovision with OpenCV. Features disparity image training and real-time visualization.",
-        tech: ["OpenCV", "C++", "Computer Vision"],
-        github: "https://github.com/ritvikv03/3D-Reconstruction",
-        stars: 12
+        title: "Data Analysis Chatbot",
+        description: "Interactive Streamlit app using Google Gemini AI to simplify complex data analytics. Upload CSV/Excel/PDF/Word for instant insights.",
+        tech: ["Python", "Streamlit", "Gemini AI", "Pandas"],
+        github: "https://github.com/ritvikv03/Data_Analysis_Chatbot",
+        stars: 0
     },
     {
-        title: "EAST-Text-Detection",
-        description: "Robust text detection in complex images using the EAST algorithm. Implemented for high-speed document processing.",
-        tech: ["Python", "Deep Learning", "OpenCV"],
-        github: "https://github.com/ritvikv03/EAST-Text-Detection",
-        stars: 8
+        title: "Spotify Visualizer & Recommendation",
+        description: "Vue-based interactive tool providing a galaxy visualization of music and playlist recommendations using the Spotify API.",
+        tech: ["Vue.js", "JavaScript", "Spotify API", "Tailwind"],
+        github: "https://github.com/ritvikv03/Spotify-Visualizer-Recommendation",
+        stars: 0
     },
     {
-        title: "Image-Stitching",
-        description: "Real-time digital image stitching using SURF feature extractor and OpenPano. Seamless panoramas from video streams.",
-        tech: ["C++", "OpenPano", "Image Processing"],
-        github: "https://github.com/ritvikv03/Image-Stitching",
-        stars: 5
+        title: "Molson Coors Analytics",
+        description: "Data science project for eCommerce content optimization to drive sales for Molson Coors, developed for an analytics challenge.",
+        tech: ["Python", "Jupyter", "Data Science", "E-commerce"],
+        github: "https://github.com/ritvikv03/Molson_Coors_Analytics_Challenge",
+        stars: 0
     },
     {
-        title: "Age-Gender Prediction",
-        description: "WideResNet model trained on IMDB-WIKI dataset for real-time age and gender classification from facial features.",
-        tech: ["TensorFlow", "Keras", "Python"],
-        github: "https://github.com/ritvikv03/Age-Gender_Prediction",
-        stars: 15
+        title: "Portfolio Website",
+        description: "Modern, high-performance developer portfolio with glassmorphism, fluid animations, and a secure build pipeline.",
+        tech: ["Next.js", "TypeScript", "Tailwind 4", "Framer Motion"],
+        github: "https://github.com/ritvikv03/new_portfolio",
+        stars: 0
     }
 ];
 

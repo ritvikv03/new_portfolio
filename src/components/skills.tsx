@@ -16,7 +16,7 @@ export function Skills() {
 
                 <div className="flex flex-wrap gap-2 md:gap-3">
                     {stack.map((item, index) => {
-                        const IconComponent = (LucideIcons as any)[item.icon] || LucideIcons.Zap;
+                        const IconComponent = (LucideIcons as unknown as Record<string, React.ElementType>)[item.icon] || LucideIcons.Zap;
 
                         return (
                             <motion.div

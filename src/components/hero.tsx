@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Github, Code2, CheckCircle2, Mail } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 
 export function Hero() {
@@ -31,10 +32,12 @@ export function Hero() {
                     <div className="flex flex-col md:flex-row md:items-start gap-8">
                         {/* Left-Aligned Avatar - Squircle/Rounded-XL */}
                         <div className="w-24 h-24 rounded-2xl bg-[#18181b] border border-[#1e1e20] overflow-hidden relative shadow-2xl flex-shrink-0">
-                            <img
+                            <Image
                                 src="https://github.com/ritvikv03.png"
                                 alt={name}
-                                className="w-full h-full object-cover"
+                                fill
+                                className="object-cover"
+                                priority
                             />
                         </div>
 

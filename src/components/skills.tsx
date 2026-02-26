@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import {
-    Code2, Database, Layout, Smartphone, Cloud, Terminal,
-    Cpu, Brain, Globe, Search, BarChart, Server
+    Layout, Terminal,
+    Brain, Server
 } from "lucide-react";
 
 const SKILL_GROUPS = [

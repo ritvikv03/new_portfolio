@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, GithubIcon, Terminal } from "lucide-react";
+import { Mail, Github, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 export function Contact() {

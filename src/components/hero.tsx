@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Twitter, Code2 } from "lucide-react";
+import { Twitter, Code2 } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {

@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import {
     Database, Layout, Server, Brain, Terminal,
-    Code2, Cpu, Globe, Search, Smartphone,
-    Cloud, BarChart, Layers, GitBranch,
-    Box, Zap, Shield, Wand2
+    Code2, Cpu, Search,
+    Cloud, Layers, GitBranch,
+    Box, Zap, Wand2
 } from "lucide-react";
 
 const STACK = [

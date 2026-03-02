@@ -23,7 +23,7 @@ export function StarfieldBackground() {
             color: string
         }[] = [];
 
-        let comets: {
+        const comets: {
             x: number;
             y: number;
             length: number;

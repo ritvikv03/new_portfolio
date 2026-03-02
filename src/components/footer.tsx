@@ -17,7 +17,7 @@ export function Footer() {
                     </h2>
 
                     <div className="max-w-xl mx-auto mb-12">
-                        <p className="text-[#a1a1aa] text-sm md:text-base leading-relaxed mb-6">
+                        <p className="text-[#d1d1d6] text-sm md:text-base leading-relaxed mb-6">
                             {PORTFOLIO_DATA.copy.connectSubtitle}
                         </p>
                         <p className="text-white text-lg md:text-xl font-bold leading-tight">
@@ -46,29 +46,29 @@ export function Footer() {
 
                 {/* Bottom Social Row */}
                 <div className="flex flex-wrap justify-center gap-4 pt-12 border-t border-white/5">
-                    <Link href={`mailto:${PORTFOLIO_DATA.email}`} className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/5 bg-white/[0.02] text-[#a1a1aa] hover:text-white hover:border-white/20 hover:bg-white/5 transition-all group shadow-sm">
+                    <Link href={`mailto:${PORTFOLIO_DATA.email}`} className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/5 bg-white/[0.02] text-[#d1d1d6] hover:text-white hover:border-white/20 hover:bg-white/5 transition-all group shadow-sm">
                         <Mail size={14} className="opacity-40 group-hover:opacity-100" />
                         <span className="text-[10px] font-bold tracking-widest uppercase">Mail</span>
                     </Link>
-                    <Link href={socials.github} target="_blank" className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/5 bg-white/[0.02] text-[#a1a1aa] hover:text-white hover:border-white/20 hover:bg-white/5 transition-all group shadow-sm">
+                    <Link href={socials.github} target="_blank" className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/5 bg-white/[0.02] text-[#d1d1d6] hover:text-white hover:border-white/20 hover:bg-white/5 transition-all group shadow-sm">
                         <Github size={14} className="opacity-40 group-hover:opacity-100" />
                         <span className="text-[10px] font-bold tracking-widest uppercase">Github</span>
                     </Link>
-                    <Link href={socials.twitter} target="_blank" className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/5 bg-white/[0.02] text-[#a1a1aa] hover:text-white hover:border-white/20 hover:bg-white/5 transition-all group shadow-sm">
+                    <Link href={socials.twitter} target="_blank" className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/5 bg-white/[0.02] text-[#d1d1d6] hover:text-white hover:border-white/20 hover:bg-white/5 transition-all group shadow-sm">
                         <Twitter size={14} className="opacity-40 group-hover:opacity-100" />
                         <span className="text-[10px] font-bold tracking-widest uppercase">Twitter</span>
                     </Link>
-                    <Link href={socials.linkedin} target="_blank" className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/5 bg-white/[0.02] text-[#a1a1aa] hover:text-white hover:border-white/20 hover:bg-white/5 transition-all group shadow-sm">
+                    <Link href={socials.linkedin} target="_blank" className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/5 bg-white/[0.02] text-[#d1d1d6] hover:text-white hover:border-white/20 hover:bg-white/5 transition-all group shadow-sm">
                         <Linkedin size={14} className="opacity-40 group-hover:opacity-100" />
                         <span className="text-[10px] font-bold tracking-widest uppercase">LinkedIn</span>
                     </Link>
-                    <Link href={socials.leetcode} target="_blank" className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/5 bg-white/[0.02] text-[#a1a1aa] hover:text-white hover:border-white/20 hover:bg-white/5 transition-all group shadow-sm">
+                    <Link href={socials.leetcode} target="_blank" className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/5 bg-white/[0.02] text-[#d1d1d6] hover:text-white hover:border-white/20 hover:bg-white/5 transition-all group shadow-sm">
                         <Code2 size={14} className="opacity-40 group-hover:opacity-100" />
                         <span className="text-[10px] font-bold tracking-widest uppercase">LeetCode</span>
                     </Link>
                 </div>
 
-                <div className="mt-16 text-[10px] font-bold tracking-[0.2em] uppercase text-white/5">
+                <div className="mt-16 text-[10px] font-bold tracking-[0.2em] uppercase text-white/20">
                     © {new Date().getFullYear()} {name} — 1:1 Replica Design
                 </div>
             </div>

@@ -41,7 +41,7 @@ export function Projects() {
 
                             {/* Content with 2rem padding (via bento-card class) */}
                             <div className="p-10 flex flex-col flex-grow">
-                                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-white/40 mb-3">
+                                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-white/60 mb-3">
                                     FEATURED PROJECT
                                 </span>
 
@@ -49,12 +49,12 @@ export function Projects() {
                                     {project.title}
                                 </h3>
 
-                                <p className="text-[#a1a1aa] text-sm md:text-base leading-relaxed mb-10 line-clamp-2">
+                                <p className="text-[#d1d1d6] text-sm md:text-base leading-relaxed mb-10 line-clamp-2">
                                     {project.description}
                                 </p>
 
                                 <div className="mb-10">
-                                    <h4 className="text-[10px] font-black tracking-[0.2em] uppercase text-white/40 mb-4">
+                                    <h4 className="text-[10px] font-black tracking-[0.2em] uppercase text-white/60 mb-4">
                                         TECHNOLOGIES
                                     </h4>
                                     <div className="flex flex-wrap gap-2">
@@ -70,7 +70,7 @@ export function Projects() {
                                     <Link
                                         href={project.github}
                                         target="_blank"
-                                        className="inline-flex items-center text-xs font-bold tracking-[0.2em] uppercase text-white/50 hover:text-white transition-colors group"
+                                        className="inline-flex items-center text-xs font-bold tracking-[0.2em] uppercase text-white/70 hover:text-white transition-colors group"
                                     >
                                         View Details
                                         <ArrowUpRight size={14} className="ml-1.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

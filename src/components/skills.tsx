@@ -27,10 +27,10 @@ export function Skills() {
                                 transition={{ delay: index * 0.05 }}
                                 className="badge py-2.5 px-5 flex items-center space-x-2.5 bg-[#18181b]/30 border border-[#1e1e20] hover:border-[#3f3f46] hover:bg-[#1e1e24] transition-all cursor-default shadow-sm"
                             >
-                                <span className="text-white/50 group-hover:text-white/60 transition-colors">
+                                <span className="text-white/70 group-hover:text-white transition-colors">
                                     <IconComponent size={14} />
                                 </span>
-                                <span className="text-[11px] font-bold tracking-widest uppercase text-[#a1a1aa] group-hover:text-white transition-colors">
+                                <span className="text-[11px] font-bold tracking-widest uppercase text-[#d1d1d6] group-hover:text-white transition-colors">
                                     {item.name}
                                 </span>
                             </motion.div>

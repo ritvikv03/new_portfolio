@@ -42,8 +42,8 @@ export function Experience() {
                                 </a>
 
                                 <div className="flex flex-wrap items-center gap-2 mb-6">
-                                    <div className="flex items-center text-[#a1a1aa] text-sm font-bold">
-                                        <span className="font-mono mr-2 text-[10px] opacity-60">{"</>"}</span>
+                                    <div className="flex items-center text-[#d1d1d6] text-sm font-bold">
+                                        <span className="font-mono mr-2 text-[10px] opacity-80">{"</>"}</span>
                                         <span>{exp.title}</span>
                                     </div>
                                     <span className="text-[10px] font-bold tracking-widest uppercase text-white/70 border border-white/20 bg-white/[0.05] px-2 py-0.5 rounded-md">
@@ -56,8 +56,8 @@ export function Experience() {
 
                                 <ul className="space-y-4 max-w-3xl">
                                     {exp.points.map((point, i) => (
-                                        <li key={i} className="flex items-start text-[#a1a1aa] text-sm md:text-base leading-relaxed">
-                                            <span className="mr-3 mt-2 h-1 w-1 shrink-0 rounded-full bg-white/20" />
+                                        <li key={i} className="flex items-start text-[#d1d1d6] text-sm md:text-base leading-relaxed">
+                                            <span className="mr-3 mt-2 h-1 w-1 shrink-0 rounded-full bg-white/40" />
                                             {point}
                                         </li>
                                     ))}

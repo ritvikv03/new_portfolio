@@ -26,7 +26,7 @@
 :root {
   --background: #030303;
   --foreground: #ffffff;
-  --card: #09090b;
+  --card: #0c0c0e;
   --card-foreground: #ffffff;
   --popover: #09090b;
   --popover-foreground: #ffffff;
@@ -35,12 +35,12 @@
   --secondary: #18181b;
   --secondary-foreground: #ffffff;
   --muted: #18181b;
-  --muted-foreground: #a1a1aa;
+  --muted-foreground: #d1d1d6; /* Brighter for readability */
   --accent: #18181b;
   --accent-foreground: #ffffff;
   --destructive: #7f1d1d;
   --destructive-foreground: #ffffff;
-  --border: #1e1e20;
+  --border: #2d2d30; /* More defined for visibility */
   --input: #1e1e20;
   --ring: #ffffff;
   --radius: 1rem;
@@ -132,4 +132,44 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #3f3f46;
+}
+
+/* Cosmic Animations */
+@keyframes cosmic-drift {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(3%, 3%) scale(1.1); }
+  66% { transform: translate(-2%, 5%) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes cosmic-drift-reverse {
+  0% { transform: translate(0, 0) scale(1.1); }
+  33% { transform: translate(-4%, -2%) scale(1); }
+  66% { transform: translate(3%, -5%) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1.1); }
+}
+
+@keyframes cosmic-float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes cosmic-float-reverse {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(20px) rotate(-5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.animate-cosmic-drift { animation: cosmic-drift linear infinite; }
+.animate-cosmic-drift-reverse { animation: cosmic-drift-reverse linear infinite; }
+.animate-cosmic-float { animation: cosmic-float ease-in-out infinite; }
+.animate-cosmic-float-reverse { animation: cosmic-float-reverse ease-in-out infinite; }
+
+.readable-muted {
+  color: #d1d1d6;
+}
+
+.readable-border {
+  border-color: rgba(255, 255, 255, 0.15);
 }

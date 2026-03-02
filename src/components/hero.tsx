@@ -53,7 +53,7 @@ export function Hero() {
                                 {role}
                             </p>
 
-                            <p className="text-[#a1a1aa] text-sm md:text-base leading-relaxed mb-6">
+                            <p className="text-[#d1d1d6] text-sm md:text-base leading-relaxed mb-6">
                                 {bio}
                             </p>
 

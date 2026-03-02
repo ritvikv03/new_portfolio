@@ -8,7 +8,7 @@ export const PORTFOLIO_DATA = {
         linkedin: "https://www.linkedin.com/in/ritvikvasikarla/",
         leetcode: "https://leetcode.com/u/ritvikv2/",
         twitter: "https://twitter.com/ritvikv03", // Will be swapped for GitHub in Hero
-        resume: "/Users/ritvikvasikarla/Desktop/Vasikarla_Ritvik_Resume.pdf",
+        resume: "/resume.pdf",
     },
     activity: {
         status: "Building",
@@ -46,71 +46,71 @@ export const PORTFOLIO_DATA = {
     ],
     experience: [
         {
-            company: "Self-Employed",
-            title: "Full Stack Engineer & AI Developer",
-            type: "Freelance",
-            period: "2024 — Present",
+            company: "Graduate Data Analytics Club",
+            title: "Analytics Lead",
+            type: "Part-time",
+            period: "Aug 2025 — Present",
             points: [
-                "Developing modern web applications using Next.js, TypeScript, and AI integrations.",
-                "Engineering custom AI agents and ML pipelines for technical product builds.",
-                "Focused on high-performance architecture and premium user experience design."
+                "Led analytics initiatives within a graduate data science community, providing guidance on problem framing and modeling approaches.",
+                "Reviewed and advised on peer analytics projects involving Python, SQL, and statistical modeling.",
+                "Promoted decision-focused data science workflows through discussions on feature engineering and model evaluation."
             ]
         },
         {
-            company: "Academic Project",
-            title: "AI Research Fellow",
-            type: "Fellowship",
-            period: "2023 — 2024",
+            company: "Molson Coors Beverage Company",
+            title: "Analytics Challenge - Product Analytics & NLP Modeling",
+            type: "Self-employed",
+            period: "Nov 2025",
             points: [
-                "Implemented deep learning models for computer vision tasks using TensorFlow and PyTorch.",
-                "Specialized in object detection and facial feature analysis for research datasets.",
-                "Developed end-to-end data processing pipelines for large-scale ML model training."
+                "Placed 1st overall by developing an NLP framework to optimize eCommerce product descriptions for online beer sales.",
+                "Engineered 15+ NLP features to quantify how copy structure and readability impact eCommerce performance.",
+                "Delivered actionable recommendations projected to increase eCommerce sales by 30-40% through data-driven copy optimization."
             ]
         },
         {
-            company: "Tech Start-up",
-            title: "Frontend Developer Intern",
-            type: "Internship",
-            period: "2022 — 2023",
+            company: "UW-Madison's Business Analytics MSBA",
+            title: "MSBA Analytics Challenge - Healthcare Analytics",
+            type: "Self-employed",
+            period: "Oct 2025",
             points: [
-                "Collaborated with cross-functional teams to build responsive user interfaces.",
-                "Optimized dashboard performance and implemented real-time data visualization.",
-                "Integrated REST APIs and streamlined frontend data management systems."
+                "Placed 2nd overall by building a machine learning solution (XGBoost/Ensemble) to predict 30-day hospital readmissions.",
+                "Analyzed 10,000 patient admissions to identify high-risk populations and surface key clinical drivers using SHAP analysis.",
+                "Translated analytical findings into actionable healthcare strategies, including targeted interventions for high-risk diagnoses."
             ]
         }
     ],
     projects: [
         {
             title: "Data Analysis Chatbot",
-            description: "Interactive Streamlit app using Google Gemini AI to simplify complex data analytics. Upload CSV/Excel/PDF/Word for instant insights.",
+            description: "Interactive data analysis tool that Chat with your data using Google Gemini AI. Upload CSV/Excel/PDF/Word files for instant insights and visualizations.",
             tech: ["Python", "Streamlit", "Gemini AI", "Pandas", "NLP"],
             github: "https://github.com/ritvikv03/Data_Analysis_Chatbot",
-            image: "new_portfolio/chatbot.jpeg", // Using avatar as placeholder, user will replace
+            image: "/projects/chatbot.jpeg",
             status: "Featured Project",
             span: "md:col-span-2"
         },
         {
-            title: "Spotify Visualizer & Recommendation",
-            description: "Vue-based interactive tool providing a galaxy visualization of music and playlist recommendations using the Spotify API.",
-            tech: ["Vue.js", "Spotify API", "Tailwind", "JavaScript"],
+            title: "NBA 3-Point Breakdown",
+            description: "Exploratory data analysis of NBA shooting trends, focusing on the evolution of 3-point efficiency and volume across different eras.",
+            tech: ["Python", "Pandas", "Matplotlib", "Seaborn", "Analytics"],
+            github: "https://github.com/ritvikv03/NBA-3-Point-Breakdown-",
+            image: "/projects/nba_analytics.png",
+            span: "md:col-span-1"
+        },
+        {
+            title: "Spotify Visualizer & Recommender",
+            description: "Music discovery platform that visualizes your listening habits and provides personalized playlist recommendations using the Spotify API.",
+            tech: ["Vue.js", "Spotify API", "Tailwind CSS", "JavaScript"],
             github: "https://github.com/ritvikv03/Spotify-Visualizer-Recommendation",
-            image: "https://github.com/ritvikv03.png",
+            image: "/projects/spotify_visualizer.png",
             span: "md:col-span-1"
         },
         {
-            title: "Molson Coors Analytics",
-            description: "Data science project for eCommerce content optimization to drive sales for Molson Coors, developed for an analytics challenge.",
-            tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Analytics"],
-            github: "https://github.com/ritvikv03/Molson_Coors_Analytics_Challenge",
-            image: "https://github.com/ritvikv03.png",
-            span: "md:col-span-1"
-        },
-        {
-            title: "Portfolio Website",
-            description: "Modern, high-performance developer portfolio with glassmorphism, fluid animations, and a secure build pipeline.",
-            tech: ["Next.js", "TypeScript", "Tailwind 4", "Framer Motion"],
-            github: "https://github.com/ritvikv03/new_portfolio",
-            image: "https://github.com/ritvikv03.png",
+            title: "Bankruptcy Prediction",
+            description: "Machine learning model developed to predict corporate bankruptcy using financial ratios and historical performance data.",
+            tech: ["Python", "Scikit-Learn", "XGBoost", "Data Science"],
+            github: "https://github.com/ritvikv03/Bankruptcy-Prediction",
+            image: "/projects/stock_market.png",
             span: "md:col-span-2"
         }
     ],

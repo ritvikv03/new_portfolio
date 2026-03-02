@@ -1,14 +1,14 @@
 export const PORTFOLIO_DATA = {
     name: "Ritvik Vasikarla",
-    role: "Full-stack engineer building technical software & visual products.",
-    bio: "Full-stack engineer and Data/ML enthusiast building high-performance, visually stunning digital experiences. Focused on AI Agents, Computer Vision, and modern software architecture.",
+    role: "Graduate student in business analytics with a background in statistics, mathematics and economics.",
+    bio: "I'm Ritvik — a data person who can build. I have projects in ML, data engineering, and software. Figuring it out one problem at a time.",
     email: "ritvik.vasikarla@gmail.com",
     socials: {
         github: "https://github.com/ritvikv03",
         linkedin: "https://www.linkedin.com/in/ritvikvasikarla/",
         leetcode: "https://leetcode.com/u/ritvikv2/",
         twitter: "https://twitter.com/ritvikv03", // Will be swapped for GitHub in Hero
-        resume: "/resume.pdf",
+        resume: "/Users/ritvikvasikarla/Desktop/Vasikarla_Ritvik_Resume.pdf",
     },
     activity: {
         status: "Building",

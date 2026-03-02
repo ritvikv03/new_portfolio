@@ -50,6 +50,7 @@ export const PORTFOLIO_DATA = {
             title: "Analytics Lead",
             type: "Part-time",
             period: "Aug 2025 — Present",
+            link: "https://www.linkedin.com/in/ritvikvasikarla/",
             points: [
                 "Led analytics initiatives within a graduate data science community, providing guidance on problem framing and modeling approaches.",
                 "Reviewed and advised on peer analytics projects involving Python, SQL, and statistical modeling.",
@@ -61,6 +62,7 @@ export const PORTFOLIO_DATA = {
             title: "Analytics Challenge - Product Analytics & NLP Modeling",
             type: "Self-employed",
             period: "Nov 2025",
+            link: "https://www.linkedin.com/in/ritvikvasikarla/",
             points: [
                 "Placed 1st overall by developing an NLP framework to optimize eCommerce product descriptions for online beer sales.",
                 "Engineered 15+ NLP features to quantify how copy structure and readability impact eCommerce performance.",
@@ -72,6 +74,7 @@ export const PORTFOLIO_DATA = {
             title: "MSBA Analytics Challenge - Healthcare Analytics",
             type: "Self-employed",
             period: "Oct 2025",
+            link: "https://www.linkedin.com/in/ritvikvasikarla/",
             points: [
                 "Placed 2nd overall by building a machine learning solution (XGBoost/Ensemble) to predict 30-day hospital readmissions.",
                 "Analyzed 10,000 patient admissions to identify high-risk populations and surface key clinical drivers using SHAP analysis.",

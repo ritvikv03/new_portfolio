@@ -27,19 +27,29 @@ export function Experience() {
                                 {/* Timeline Dot */}
                                 <div className="absolute -left-[37px] md:-left-[53px] top-2 h-2.5 w-2.5 rounded-full bg-[#3f3f46] border border-[#1e1e20] z-10" />
 
-                                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 tracking-tight">
-                                    {exp.company}
-                                </h3>
+                                <a
+                                    href={exp.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group/link inline-block"
+                                >
+                                    <h3 className="text-xl md:text-2xl font-bold text-white mb-2 tracking-tight group-hover/link:text-blue-400 transition-colors">
+                                        {exp.company}
+                                        <span className="inline-block ml-2 opacity-0 group-hover/link:opacity-100 transition-all transform translate-y-1 group-hover/link:translate-y-0">
+                                            ↗
+                                        </span>
+                                    </h3>
+                                </a>
 
                                 <div className="flex flex-wrap items-center gap-2 mb-6">
                                     <div className="flex items-center text-[#a1a1aa] text-sm font-bold">
                                         <span className="font-mono mr-2 text-[10px] opacity-40">{"</>"}</span>
                                         <span>{exp.title}</span>
                                     </div>
-                                    <span className="text-[10px] font-bold tracking-widest uppercase text-white/30 border border-[#1e1e20] bg-white/[0.02] px-2 py-0.5 rounded-md">
+                                    <span className="text-[10px] font-bold tracking-widest uppercase text-white/70 border border-white/20 bg-white/[0.05] px-2 py-0.5 rounded-md">
                                         {exp.type}
                                     </span>
-                                    <span className="text-[10px] font-bold tracking-widest uppercase text-white/20">
+                                    <span className="text-[10px] font-bold tracking-widest uppercase text-white/60">
                                         | {exp.period}
                                     </span>
                                 </div>

@@ -12,7 +12,7 @@ export const PORTFOLIO_DATA = {
     },
     activity: {
         status: "Building",
-        project: "Solar Station",
+        project: "PESTEL AI Agents/Workflow",
     },
     stack: [
         { name: "Python", icon: "Code2" },

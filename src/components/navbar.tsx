@@ -40,7 +40,7 @@ export function Navbar() {
                     <Link
                         href={socials.github}
                         target="_blank"
-                        className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-[#1e1e20] bg-white/5 text-[#a1a1aa] hover:text-white hover:border-[#3f3f46] transition-all"
+                        className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/10 bg-white/[0.03] backdrop-blur-md text-[#a1a1aa] hover:text-white hover:border-white/30 hover:bg-white/10 transition-all shadow-sm"
                     >
                         <Github size={14} />
                         <span className="text-[10px] font-bold tracking-widest uppercase">Github</span>
@@ -48,7 +48,7 @@ export function Navbar() {
                     <Link
                         href={socials.linkedin}
                         target="_blank"
-                        className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-[#1e1e20] bg-white/5 text-[#a1a1aa] hover:text-white hover:border-[#3f3f46] transition-all"
+                        className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/10 bg-white/[0.03] backdrop-blur-md text-[#a1a1aa] hover:text-white hover:border-white/30 hover:bg-white/10 transition-all shadow-sm"
                     >
                         <Linkedin size={14} />
                         <span className="text-[10px] font-bold tracking-widest uppercase">LinkedIn</span>
@@ -56,7 +56,7 @@ export function Navbar() {
                     <Link
                         href={socials.resume}
                         target="_blank"
-                        className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-[#1e1e20] bg-white/5 text-[#a1a1aa] hover:text-white hover:border-[#3f3f46] transition-all"
+                        className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-white/10 bg-white/[0.03] backdrop-blur-md text-[#a1a1aa] hover:text-white hover:border-white/30 hover:bg-white/10 transition-all shadow-sm"
                     >
                         <FileText size={14} />
                         <span className="text-[10px] font-bold tracking-widest uppercase">Resume</span>

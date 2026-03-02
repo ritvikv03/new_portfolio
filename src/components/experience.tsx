@@ -43,13 +43,13 @@ export function Experience() {
 
                                 <div className="flex flex-wrap items-center gap-2 mb-6">
                                     <div className="flex items-center text-[#a1a1aa] text-sm font-bold">
-                                        <span className="font-mono mr-2 text-[10px] opacity-40">{"</>"}</span>
+                                        <span className="font-mono mr-2 text-[10px] opacity-60">{"</>"}</span>
                                         <span>{exp.title}</span>
                                     </div>
                                     <span className="text-[10px] font-bold tracking-widest uppercase text-white/70 border border-white/20 bg-white/[0.05] px-2 py-0.5 rounded-md">
                                         {exp.type}
                                     </span>
-                                    <span className="text-[10px] font-bold tracking-widest uppercase text-white/60">
+                                    <span className="text-[10px] font-bold tracking-widest uppercase text-white/80">
                                         | {exp.period}
                                     </span>
                                 </div>

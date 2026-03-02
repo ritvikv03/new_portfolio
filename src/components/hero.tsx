@@ -57,7 +57,7 @@ export function Hero() {
                                 {bio}
                             </p>
 
-                            <div className="flex items-center space-x-2 text-white/50 hover:text-white transition-colors">
+                            <div className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors">
                                 <Mail size={16} />
                                 <Link
                                     href={`mailto:${email}`}
@@ -82,7 +82,7 @@ export function Hero() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                         </span>
-                        <span className="text-[11px] font-bold tracking-widest uppercase text-white/40">
+                        <span className="text-[11px] font-bold tracking-widest uppercase text-white/60">
                             {activity.status} <span className="text-white ml-2">{activity.project}</span>
                         </span>
                     </div>

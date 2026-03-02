@@ -85,7 +85,7 @@ export const PORTFOLIO_DATA = {
             description: "Interactive Streamlit app using Google Gemini AI to simplify complex data analytics. Upload CSV/Excel/PDF/Word for instant insights.",
             tech: ["Python", "Streamlit", "Gemini AI", "Pandas", "NLP"],
             github: "https://github.com/ritvikv03/Data_Analysis_Chatbot",
-            image: "chatbot.jpeg", // Using avatar as placeholder, user will replace
+            image: "new_portfolio/chatbot.jpeg", // Using avatar as placeholder, user will replace
             status: "Featured Project",
             span: "md:col-span-2"
         },

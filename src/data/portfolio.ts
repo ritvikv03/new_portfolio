@@ -104,18 +104,18 @@ export const PORTFOLIO_DATA = {
 
     projects: [
         {
-            title: "PESTEL AI Agents",
-            hook: "7-phase multi-source intelligence engine for macro-risk analysis.",
+            title: "Chatbot Project",
+            hook: "Advanced AI chatbot with custom knowledge integration and natural language interface.",
             highlights: [
-                "Automated ingestion from 10+ APIs (Eurostat, FAOSTAT, News)",
-                "Agentic workflow using LangChain for cross-domain quantification",
-                "Fully reactive dashboard for executive decision making"
+                "Integrated with GitHub for seamless codebase understanding",
+                "Context-aware response generation using state-of-the-art LLMs",
+                "Reactive UI for real-time human-AI interaction"
             ],
-            metric: "100% AUTOMATED PIPELINE",
-            tech: ["LangChain", "Python", "Streamlit", "GCP"],
+            metric: "REAL-TIME INTERACTION",
+            tech: ["LangChain", "Python", "React", "OpenRouter"],
             image: "/projects/chatbot.jpeg",
             github: "https://github.com/ritvikv03",
-            status: "Internal MVP",
+            status: "Production",
             tag: "LLM / Agents"
         },
         {
@@ -128,26 +128,26 @@ export const PORTFOLIO_DATA = {
             ],
             metric: "SUB-2S LATENCY",
             tech: ["Vue.js", "Python", "Actions", "Reinforcement Learning"],
-            image: "/projects/spotify_visualizer.png",
+            image: "/projects/spotify_new.png",
             github: "https://github.com/ritvikv03",
-            live: "#",
+            live: "https://spotify-recommender-visualizer.vercel.app/",
             status: "Production",
             tag: "Full-Stack"
         },
         {
-            title: "Healthcare Readmission",
-            hook: "XGBoost ensemble predicting patient readmission across 10,000 records.",
+            title: "NBA Analysis",
+            hook: "Data-driven insights and statistical modeling for NBA player performance.",
             highlights: [
-                "Feature engineered complex longitudinal patient histories",
-                "Optimized for high-recall to prevent missed critical cases",
-                "Awarded 2nd place at UW-Madison Healthcare ML Challenge"
+                "Analyzed longitudinal performance metrics for top-tier athletes",
+                "Modeled player impact using advanced Bayesian statistics",
+                "Visualized shot charts and player efficiency ratings"
             ],
-            metric: "TOP 2% NATIONWIDE",
-            tech: ["XGBoost", "Python", "Scikit-Learn", "Pandas"],
+            metric: "ELITE ANALYTICS",
+            tech: ["Python", "Pandas", "Matplotlib", "Statistics"],
             image: "/projects/nba_analytics.png",
             github: "https://github.com/ritvikv03",
-            status: "Research",
-            tag: "Machine Learning"
+            status: "Active",
+            tag: "Data Science"
         },
         {
             title: "Bankruptcy Prediction",
@@ -168,7 +168,7 @@ export const PORTFOLIO_DATA = {
 
     experiences: [
         {
-            company: "Fendt Strategic Radar",
+            company: "Innovation Radar",
             role: "ML Platform Architect",
             period: "2024 — Present",
             description: [

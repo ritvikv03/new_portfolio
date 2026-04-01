@@ -1,7 +1,7 @@
 export const PORTFOLIO_DATA = {
     name: "Ritvik Vasikarla",
-    role: "ML & Data Engineer who builds production-ready intelligence.",
-    bio: "Building end-to-end ML systems, agentic AI pipelines, and data architectures. Combining technical depth with strategic thinking—from Bayesian analytics to high-frequency development.",
+    role: "Data Scientist & Builder at Heart",
+    bio: "I design and build data-driven systems that turn complex data into meaningful insights. From statistical modeling and machine learning to cloud-based analytics and interactive visualizations, I create solutions driven by curiosity and impact across tech and finance.",
     email: "ritvik.vasikarla@gmail.com",
 
     socials: {

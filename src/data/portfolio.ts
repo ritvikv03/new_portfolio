@@ -16,10 +16,10 @@ export const PORTFOLIO_DATA = {
 
     // Modern Dashboard Stats
     dashboardStats: [
-        { label: "Active Contributor", value: "288+", detail: "GitHub commits in last 12mo", icon: "activity" },
-        { label: "Technical reach", value: "1.3k+", detail: "Professional network reach", icon: "users" },
-        { label: "Code preservation", value: "Arctic", detail: "Vault contributor @GitHub", icon: "archive" },
-        { label: "Strategic Play", value: "Competitive", detail: "Chess & Poker enthusiast", icon: "target" }
+        { label: "Home Base", value: "Austin, TX", detail: "Current Location", icon: "map-pin" },
+        { label: "Alma Mater", value: "Texas A&M", detail: "University", icon: "award" },
+        { label: "Strategic Play", value: "Chess", detail: "Always thinking steps ahead", icon: "target" },
+        { label: "Recreational", value: "Hooper", detail: "Basketball enthusiast", icon: "basketball" }
     ],
 
     // Unique Accreditations

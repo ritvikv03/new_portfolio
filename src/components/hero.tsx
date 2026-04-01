@@ -20,6 +20,7 @@ import {
     Code,
     Instagram,
     Music,
+    Swords,
     LucideIcon
 } from "lucide-react";
 import Image from "next/image";
@@ -40,7 +41,8 @@ const ICON_MAP: Record<string, LucideIcon> = {
     "map-pin": MapPin,
     code: Code,
     instagram: Instagram,
-    spotify: Music
+    spotify: Music,
+    swords: Swords
 };
 
 // Custom SVGs for platforms not in Lucide

@@ -170,7 +170,7 @@ export const PORTFOLIO_DATA = {
         {
             company: "Innovation Radar",
             role: "ML Platform Architect",
-            period: "2024 — Present",
+            period: "2025 — Present",
             description: [
                 "Architecting a 7-phase intelligence pipeline using LangChain agents to quantify PESTEL risks.",
                 "Designing the data ingestion layer for 10+ global economic APIs.",
@@ -185,7 +185,7 @@ export const PORTFOLIO_DATA = {
         {
             company: "Molson Coors Competition",
             role: "Winner (1st Place)",
-            period: "2023",
+            period: "2025",
             description: [
                 "Built an NLP framework projecting 30-40% eCommerce sales lift for key retailers.",
                 "Engineered cross-retailer inventory logic using sentiment and volume markers.",
@@ -194,13 +194,13 @@ export const PORTFOLIO_DATA = {
             type: "Competition",
             linkedin: "https://linkedin.com/in/ritvikvasikarla",
             github: "https://github.com/ritvikv03",
-            location: "Chicago, IL",
+            location: "Milwaukee, WI",
             technologies: ["NLP", "Python", "Inventory Logic", "eCommerce"]
         },
         {
             company: "Texas A&M / UW-Madison",
             role: "Researcher & Student",
-            period: "2021 — 2024",
+            period: "2023 — 2025",
             description: [
                 "Maintained Dean's Honor Roll status while building production-ready ML artifacts.",
                 "Conducted Bayesian analysis on economic social issues (ECON 470).",

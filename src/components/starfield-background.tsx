@@ -118,11 +118,14 @@ export function StarfieldBackground() {
                 comet.x += Math.cos(comet.angle) * comet.speed;
                 comet.y += Math.sin(comet.angle) * comet.speed;
                 comet.opacity -= 0.015;
-
-                if (comet.opacity <= 0) {
-                    comets.splice(index, 1);
-                }
             });
+
+            // Remove dead comets
+            for (let i = comets.length - 1; i >= 0; i--) {
+                if (comets[i].opacity <= 0) {
+                    comets.splice(i, 1);
+                }
+            }
 
             animationFrameId = requestAnimationFrame(draw);
         };
@@ -142,20 +145,20 @@ export function StarfieldBackground() {
             {/* Nebula Gradients with Animation */}
             <div className="absolute inset-0 overflow-hidden">
                 <div
-                    className="absolute top-[-10%] left-[-10%] w-[70%] h-[70%] rounded-full bg-indigo-900/30 blur-[130px] animate-cosmic-drift"
+                    className="absolute top-[-10%] left-[-10%] w-[70%] h-[70%] bg-[radial-gradient(circle_at_center,rgba(49,46,129,0.25)_0%,transparent_60%)] animate-cosmic-drift"
                     style={{ animationDuration: '40s' }}
                 />
                 <div
-                    className="absolute bottom-[-10%] right-[-10%] w-[80%] h-[80%] rounded-full bg-purple-900/25 blur-[160px] animate-cosmic-drift-reverse"
+                    className="absolute bottom-[-10%] right-[-10%] w-[80%] h-[80%] bg-[radial-gradient(circle_at_center,rgba(88,28,135,0.2)_0%,transparent_60%)] animate-cosmic-drift-reverse"
                     style={{ animationDuration: '55s' }}
                 />
                 <div
-                    className="absolute top-[20%] right-[10%] w-[50%] h-[50%] rounded-full bg-blue-800/20 blur-[140px] animate-cosmic-float"
+                    className="absolute top-[20%] right-[10%] w-[50%] h-[50%] bg-[radial-gradient(circle_at_center,rgba(30,64,175,0.15)_0%,transparent_60%)] animate-cosmic-float"
                     style={{ animationDuration: '30s' }}
                 />
                 <div
-                    className="absolute bottom-[20%] left-[5%] w-[45%] h-[45%] rounded-full bg-magenta-900/15 blur-[120px] animate-cosmic-float-reverse"
-                    style={{ animationDuration: '45s', backgroundColor: 'rgba(139, 0, 139, 0.15)' }}
+                    className="absolute bottom-[20%] left-[5%] w-[45%] h-[45%] bg-[radial-gradient(circle_at_center,rgba(131,24,67,0.15)_0%,transparent_60%)] animate-cosmic-float-reverse"
+                    style={{ animationDuration: '45s' }}
                 />
             </div>
 

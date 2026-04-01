@@ -44,13 +44,13 @@ const ICON_MAP: Record<string, LucideIcon> = {
 };
 
 // Custom SVGs for platforms not in Lucide
-const DiscordIcon = ({ size = 20, className }: { size?: number, className?: string }) => (
+const DiscordIcon = ({ size = 20, className, strokeWidth }: { size?: number, className?: string, strokeWidth?: number }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
         <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1971.3728.2914a.077.077 0 01-.0066.1277 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z" />
     </svg>
 );
 
-const LeetCodeIcon = ({ size = 20, className }: { size?: number, className?: string }) => (
+const LeetCodeIcon = ({ size = 20, className, strokeWidth }: { size?: number, className?: string, strokeWidth?: number }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
         <path d="M13.483 1.901a1.1 1.1 0 00-1.227.062L5.432 6.574a1.1 1.1 0 00-.436.883v10.518a1.1 1.1 0 00.436.883l6.824 4.61a1.1 1.1 0 001.2 0l6.824-4.61a1.1 1.1 0 00.436-.883V7.457a1.1 1.1 0 00-.436-.883l-6.824-4.611a1.1 1.1 0 00-.001-.062zM7.227 8.034l4.773-3.226 4.773 3.226v7.417l-4.773 3.226-4.773-3.226V8.034z" />
         <path d="M16.142 12s-3.008 0-3.008 0l-.824.825 2.548 2.548.825-.824v1.65l-1.65 1.65h-1.65l-2.474-2.474V13.65L8.263 12h1.65l1.65 1.65h2.474l1.242-1.242-1.242-1.242H11.56L9.914 9.516h1.65l1.65 1.65s3.008 0 3.008 0L17.79 12.825v-1.65l-1.65-1.65h-1.65l-2.474 2.474v1.65l1.65 1.65h1.65l1.65-1.65V12z" />
@@ -63,9 +63,9 @@ export function Hero() {
     const socialLinks = [
         { href: socials.github, icon: Github, label: "GitHub", color: "text-white", size: 20 },
         { href: socials.linkedin, icon: Linkedin, label: "LinkedIn", color: "text-[#0077b5]", size: 20 },
-        { href: socials.instagram, icon: Instagram, label: "Instagram", color: "text-[#e4405f]", size: 24 },
+        { href: socials.instagram, icon: Instagram, label: "Instagram", color: "text-[#ff477e]", size: 28 },
         { href: `https://discord.com/users/559173897984147458`, icon: DiscordIcon, label: "Discord", color: "text-[#5865f2]", size: 20 },
-        { href: socials.leetcode, icon: LeetCodeIcon, label: "LeetCode", color: "text-[#ffa116]", size: 24 },
+        { href: socials.leetcode, icon: LeetCodeIcon, label: "LeetCode", color: "text-[#ffa116]", size: 28 },
         { href: socials.spotify, icon: Music, label: "Spotify", color: "text-[#1db954]", size: 20 },
     ];
 
@@ -157,7 +157,7 @@ export function Hero() {
                                         target="_blank"
                                         className={`flex items-center gap-3 p-3 rounded-2xl bg-white/[0.02] border border-white/10 ${social.color} transition-all group icon-luminary shadow-sm`}
                                     >
-                                        <social.icon size={social.size} className={`transition-all ${social.label === 'Instagram' ? 'stroke-[2px]' : ''}`} />
+                                        <social.icon size={social.size} {...(social.label === 'Instagram' ? { strokeWidth: 2.5 } : {})} className={`transition-all ${social.label === 'Instagram' ? 'scale-110 drop-shadow-md' : ''}`} />
                                         <span className="text-[9px] font-black uppercase tracking-widest text-white/70 group-hover:text-white transition-all">{social.label}</span>
                                     </Link>
                                 ))}

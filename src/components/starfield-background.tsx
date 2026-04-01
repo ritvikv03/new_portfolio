@@ -102,7 +102,7 @@ export function StarfieldBackground() {
 
             // Draw comets
             createComet();
-            comets.forEach((comet, index) => {
+            comets.forEach((comet) => {
                 ctx.globalAlpha = comet.opacity;
                 ctx.strokeStyle = "#ffffff";
                 ctx.lineWidth = 1.5;

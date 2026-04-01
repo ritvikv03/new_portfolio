@@ -18,7 +18,7 @@ export const PORTFOLIO_DATA = {
     dashboardStats: [
         { label: "Home Base", value: "Austin, TX", detail: "Current Location", icon: "map-pin" },
         { label: "Alma Mater", value: "Texas A&M", detail: "University", icon: "award" },
-        { label: "Strategist", value: "Chess Player", detail: "Analytical & tactical", icon: "swords" },
+        { label: "Bookworm", value: "Avid Reader", detail: "Classics & thrillers", icon: "goodreads", href: "https://www.goodreads.com/user/show/199837020-ritvik-vasikarla" },
         { label: "Recreational", value: "Hooper", detail: "Basketball enthusiast", icon: "basketball" }
     ],
 

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import {
     Github,
@@ -20,14 +21,33 @@ import {
     Code,
     Instagram,
     Music,
-    Swords,
-    LucideIcon
+    Swords
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 
-const ICON_MAP: Record<string, LucideIcon> = {
+// Custom SVGs for platforms not in Lucide
+const DiscordIcon = ({ size = 20, className }: { size?: number, className?: string }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1971.3728.2914a.077.077 0 01-.0066.1277 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z" />
+    </svg>
+);
+
+const LeetCodeIcon = ({ size = 20, className }: { size?: number, className?: string }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.483 1.901a1.1 1.1 0 00-1.227.062L5.432 6.574a1.1 1.1 0 00-.436.883v10.518a1.1 1.1 0 00.436.883l6.824 4.61a1.1 1.1 0 001.2 0l6.824-4.61a1.1 1.1 0 00.436-.883V7.457a1.1 1.1 0 00-.436-.883l-6.824-4.611a1.1 1.1 0 00-.001-.062zM7.227 8.034l4.773-3.226 4.773 3.226v7.417l-4.773 3.226-4.773-3.226V8.034z" />
+        <path d="M16.142 12s-3.008 0-3.008 0l-.824.825 2.548 2.548.825-.824v1.65l-1.65 1.65h-1.65l-2.474-2.474V13.65L8.263 12h1.65l1.65 1.65h2.474l1.242-1.242-1.242-1.242H11.56L9.914 9.516h1.65l1.65 1.65s3.008 0 3.008 0L17.79 12.825v-1.65l-1.65-1.65h-1.65l-2.474 2.474v1.65l1.65 1.65h1.65l1.65-1.65V12z" />
+    </svg>
+);
+
+const GoodreadsIcon = ({ size = 20, className }: { size?: number, className?: string }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.346.026c.422-.083.859.037 1.179.325.346.284.55.705.557 1.153-.023.457-.247.88-.612 1.156l-2.182 1.748a.601.601 0 0 0-.255.43.52.52 0 0 0 .11.424 5.886 5.886 0 0 1 .832 6.58c-1.394 2.79-4.503 3.99-7.501 2.927a.792.792 0 0 0-.499-.01c-.224.07-.303.18-.453.383l-.014.02-.941 1.254s-.792.985.457.935c3.027-.119 3.817-.119 5.439-.01 2.641.18 3.806 1.903 3.806 3.275 0 1.623-1.036 3.383-3.809 3.383a117.46 117.46 0 0 0-5.517-.03c-.31.005-.597.013-.835.02-.228.006-.41.011-.52.011-.712 0-1.648-.186-1.66-1.068-.008-.729.624-1.12 1.11-1.172.43-.045.815.007 1.24.064.252.034.518.07.815.088.185.011.366.025.552.038.53.038 1.102.08 1.926.087.427.005.759.01 1.025.015.695.012.941.016 1.28-.015 1.248-.112 1.832-.61 1.832-1.376 0-.805-.584-1.264-1.698-1.414-1.564-.213-2.33-.163-3.72-.074a87.66 87.66 0 0 1-1.669.095c-.608.029-2.449.026-2.682-1.492-.053-.416-.073-1.116.807-2.325l.75-1.003c.36-.49.582-.898.053-1.559 0 0-.39-.468-.52-.638-1.215-1.587-1.512-4.08-.448-6.114 1.577-3.011 5.4-4.26 8.37-2.581.253.143.438.203.655.163.201-.032.27-.167.363-.344.02-.04.042-.082.067-.126.004-.01.241-.465.535-1.028l.734-1.41a1.493 1.493 0 0 1 1.041-.785ZM9.193 13.243c1.854.903 3.912.208 5.254-2.47 1.352-2.699.827-5.11-1.041-6.023C10.918 3.537 8.81 5.831 8.017 7.41c-1.355 2.698-.717 4.886 1.147 5.818Z" />
+    </svg>
+);
+
+const ICON_MAP: Record<string, React.FC<{ size?: number, className?: string }>> = {
     activity: Activity,
     users: Users,
     archive: Archive,
@@ -42,22 +62,9 @@ const ICON_MAP: Record<string, LucideIcon> = {
     code: Code,
     instagram: Instagram,
     spotify: Music,
-    swords: Swords
+    swords: Swords,
+    goodreads: GoodreadsIcon
 };
-
-// Custom SVGs for platforms not in Lucide
-const DiscordIcon = ({ size = 20, className, strokeWidth }: { size?: number, className?: string, strokeWidth?: number }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
-        <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1971.3728.2914a.077.077 0 01-.0066.1277 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z" />
-    </svg>
-);
-
-const LeetCodeIcon = ({ size = 20, className, strokeWidth }: { size?: number, className?: string, strokeWidth?: number }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.483 1.901a1.1 1.1 0 00-1.227.062L5.432 6.574a1.1 1.1 0 00-.436.883v10.518a1.1 1.1 0 00.436.883l6.824 4.61a1.1 1.1 0 001.2 0l6.824-4.61a1.1 1.1 0 00.436-.883V7.457a1.1 1.1 0 00-.436-.883l-6.824-4.611a1.1 1.1 0 00-.001-.062zM7.227 8.034l4.773-3.226 4.773 3.226v7.417l-4.773 3.226-4.773-3.226V8.034z" />
-        <path d="M16.142 12s-3.008 0-3.008 0l-.824.825 2.548 2.548.825-.824v1.65l-1.65 1.65h-1.65l-2.474-2.474V13.65L8.263 12h1.65l1.65 1.65h2.474l1.242-1.242-1.242-1.242H11.56L9.914 9.516h1.65l1.65 1.65s3.008 0 3.008 0L17.79 12.825v-1.65l-1.65-1.65h-1.65l-2.474 2.474v1.65l1.65 1.65h1.65l1.65-1.65V12z" />
-    </svg>
-);
 
 export function Hero() {
     const { role, bio, name, email, socials, dashboardStats, accreditations, lifestyle, highlights } = PORTFOLIO_DATA;
@@ -167,17 +174,27 @@ export function Hero() {
                         </div>
 
                         <div className="space-y-6 pt-6 border-t border-white/10">
-                            {dashboardStats.slice(0, 3).map((stat) => {
+                            {dashboardStats.slice(0, 3).map((stat: { label: string, value: string, icon: string, href?: string }) => {
                                 const Icon = ICON_MAP[stat.icon] || Activity;
-                                return (
-                                    <div key={stat.label} className="flex items-center gap-5 group">
-                                        <div className="h-11 w-11 rounded-xl bg-white/[0.03] border border-white/20 flex items-center justify-center group-hover:border-white/40 transition-all shadow-inner">
+                                const content = (
+                                    <>
+                                        <div className="h-11 w-11 rounded-xl bg-white/[0.03] border border-white/20 flex items-center justify-center group-hover:border-white/40 transition-all shadow-inner shrink-0">
                                             <Icon size={20} className="text-white group-hover:scale-110 transition-all" />
                                         </div>
                                         <div>
                                             <div className="text-xl font-black text-white leading-none mb-1.5">{stat.value}</div>
                                             <div className="text-[10px] font-bold uppercase tracking-widest text-white/60">{stat.label}</div>
                                         </div>
+                                    </>
+                                );
+
+                                return stat.href ? (
+                                    <Link key={stat.label} href={stat.href} target="_blank" className="flex items-center gap-5 group hover:opacity-80 transition-opacity">
+                                        {content}
+                                    </Link>
+                                ) : (
+                                    <div key={stat.label} className="flex items-center gap-5 group">
+                                        {content}
                                     </div>
                                 );
                             })}

@@ -77,7 +77,7 @@ export function Footer() {
             </div>
 
             {/* Background Decorative Element */}
-            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-500/5 blur-[120px] rounded-full -z-10"></div>
+            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1)_0%,transparent_70%)] rounded-full -z-10"></div>
         </footer>
     );
 }

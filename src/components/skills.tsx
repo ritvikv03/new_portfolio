@@ -68,7 +68,7 @@ export function Skills() {
 
                 {/* Toolbelt & Environment */}
                 <div className="bento-card p-10 overflow-hidden relative group">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-[100px] group-hover:bg-blue-500/20 transition-all -z-10"></div>
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.15)_0%,transparent_70%)] group-hover:bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.25)_0%,transparent_70%)] transition-all -z-10"></div>
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="shrink-0 flex flex-col items-center md:items-start text-center md:text-left">
                             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-400 mb-2">Environment</h4>

@@ -18,7 +18,7 @@ export const PORTFOLIO_DATA = {
     dashboardStats: [
         { label: "Home Base", value: "Austin, TX", detail: "Current Location", icon: "map-pin" },
         { label: "Alma Mater", value: "Texas A&M", detail: "University", icon: "award" },
-        { label: "Strategic Play", value: "Chess", detail: "Always thinking steps ahead", icon: "target" },
+        { label: "Avid Reader", value: "Bookworm", detail: "Classics, fantasy & thrillers", icon: "scroll" },
         { label: "Recreational", value: "Hooper", detail: "Basketball enthusiast", icon: "basketball" }
     ],
 
